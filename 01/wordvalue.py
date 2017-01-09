@@ -19,8 +19,7 @@ def max_word_value(word_list=None):
     if not word_list:
         word_list = load_words()
 
-    return max(zip(word_list, map(calc_word_value, word_list)),
-               key=lambda x: x[1])[0]
+    return max(word_list, key=calc_word_value)
 
 
 if __name__ == "__main__":
